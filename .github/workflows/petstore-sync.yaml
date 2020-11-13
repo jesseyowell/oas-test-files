@@ -1,0 +1,15 @@
+name: Sync Petstore
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/github-readme-sync@2.0.0
+        with:
+          readme-oas-key: ${{ secrets.README_PETSTORE_SECRET }} 
+          oas-file-path: './pet-store.json'
+          api-version: 'v1.0.0'
