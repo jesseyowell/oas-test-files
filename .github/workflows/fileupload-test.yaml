@@ -1,0 +1,15 @@
+name: Sync Uploaded File
+on:
+  push:
+    branches:
+      - next
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/github-readme-sync@2.0.0
+        with:
+          readme-oas-key: ${{ secrets.README_PETSTORE_YAML_SECRET }} 
+          oas-file-path: './petstore.yaml'
+          api-version: 'v1.0.0'
