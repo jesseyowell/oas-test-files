@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: readmeio/rdme@v7.0.3
+      - uses: readmeio/rdme@7.0.3
         with:
           rdme: openapi ./petstore-1.0.json --key={README_OAS_KEY} --id=624c6b4fc1cefd01565cd68b
