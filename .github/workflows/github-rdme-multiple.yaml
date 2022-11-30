@@ -11,12 +11,12 @@ jobs:
       - uses: actions/checkout@v3
         name: clone repository
 
-      - uses: readmeio/rdme@8.1.1
+      - uses: readmeio/rdme@8.2.0
         name: sync pestore 1.0
         with:
           rdme: openapi ./petstore-1.0.json --key=${{ secrets.README_OAS_KEY }} --id=624c6b4fc1cefd01565cd68b
      
-      - uses: readmeio/rdme@8.1.1
+      - uses: readmeio/rdme@8.2.0
         name: sync petstore 2.0
         with:
           rdme: openapi ./petstore-2.0.json --key=${{ secrets.README_OAS_KEY }} --id=624c76a0c1eec3003ecf8b22
